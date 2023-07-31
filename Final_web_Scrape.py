@@ -8,7 +8,7 @@ def get_topics_page():
     topics_url = 'https://github.com/topics'
     response = requests.get(topics_url)
     if response.status_code != 200:
-        raise Exception('Failed to load page {}'.format(topic_url))
+        raise Exception('Failed to load page {}'.format(topics_url))
     doc = BeautifulSoup(response.text, 'html.parser')
     return doc
 
